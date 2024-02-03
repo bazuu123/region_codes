@@ -53,6 +53,9 @@
 			padding: 8px 16px;
 		}
 
+		#excluded{
+			color: orange;
+		}
 
 		@media only screen and (max-width: 600px) {
 			content{
@@ -68,7 +71,8 @@
 			Below is a list of the different regions, their ISO 3166-1 alpha-2 and alpha-3 codes and their associated calling codes.
 			The sovereign state column represents the country that is in charge of a region/territory.
 			For regions with more than one calling code the / symbol is used to separate the codes. The list does not contain
-			all of the regions present in ISO 3166-1 alpha 2
+			all of the regions present in ISO 3166-1 alpha 2.
+			<span id="excluded">Click here to view the excluded regions</span>
 		</div>
 		<table id="regionsTable" class="display">
 			<thead>
@@ -2273,6 +2277,18 @@
             			extend: 'print'
             		}, 
 		   	],
+		});
+
+		document.getElementById("excluded").addEventListener("click",function(){
+			window.alert("1.British Indian Ocean Territory (IO/IOT)\n"+
+							"2.Christmas Island (CX/CXR)\n"+
+							"3.French Southern Territories (TF/ATF)\n"+
+							"4.Guernsey (GG/GGY)\n"+
+							"5.Heard Island and MCDonald (HM/HMD)\n"+
+							"6.Isle of Man (IM/IMN)\n"+
+							"7.Jersey (JE/JEY)\n"+
+							"8.United States Minor Outlying Islands (UM/UMI)\n"+
+							"9.Cocos(Keeling) Island (CC/CCK)");
 		})
 	</script>
 </body>

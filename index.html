@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Region Calling Codes</title>
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.2/css/uikit.min.css" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.uikit.min.css"/>
+
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css" />
+
+	
+	<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+	<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+	<script src="https://cdn.datatables.net/v/dt/dt-1.13.8/date-1.5.1/datatables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			line-height: 2rem;
+		}
+
+		html {
+		 font-size: calc(12px + 0.390625vw);
+		 scroll-behavior: smooth;
+		}
+
+		body{
+			display: flex;
+			flex-direction: column;
+			width: 100vw;
+			height: 100vh;
+			overflow: scroll;
+			align-items: center;
+		}
+
+		.content{
+			width: 75%;
+			overflow: scroll;
+			display: flex;
+			flex-direction: column;
+			gap: 2rem;
+			box-sizing: border-box;
+			padding: 8px 16px;
+		}
+
+
+		@media only screen and (max-width: 600px) {
+			content{
+				width: 95%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1>Region Calling Codes</h1>
+		<div>
+			Below is a list of the different regions, their ISO 3166-1 alpha-2 and alpha-3 codes and their associated calling codes.
+			The sovereign state column represents the country that is in charge of a region/territory.
+			For regions with more than one calling code the / symbol is used to separate the codes. The list does not contain
+			all of the regions present in ISO 3166-1 alpha 2
+		</div>
+		<table id="regionsTable" class="display">
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>Sovereign State</th>
+					<th>Region Name</th>
+					<th>Other Names</th>
+					<th>Alpha 2 Code</th>
+					<th>Alpha 3 Code</th>
+					<th>Calling Code(s)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Afghanistan</td>
+					<td>Afghanistan</td>
+					<td>-</td>
+					<td>AF</td>
+					<td>AFG</td>
+					<td>93</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Finland</td>
+					<td>Åland Islands</td>
+					<td>-</td>
+					<td>AX</td>
+					<td>ALA</td>
+					<td>358</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>Albania</td>
+					<td>Albania</td>
+					<td>-</td>
+					<td>AL</td>
+					<td>ALB</td>
+					<td>355</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Algeria</td>
+					<td>Algeria</td>
+					<td>-</td>
+					<td>DZ</td>
+					<td>DZA</td>
+					<td>213</td>
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>United States of America</td>
+					<td>American Samoa</td>
+					<td>-</td>
+					<td>AS</td>
+					<td>ASM</td>
+					<td>1-684</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td>Andorra</td>
+					<td>Andorra</td>
+					<td>-</td>
+					<td>AD</td>
+					<td>AND</td>
+					<td>376</td>
+				</tr>
+				<tr>
+					<td>7</td>
+					<td>Angola</td>
+					<td>Angola</td>
+					<td>-</td>
+					<td>AO</td>
+					<td>AGO</td>
+					<td>244</td>
+				</tr>
+				<tr>
+					<td>8</td>
+					<td>United Kingdom</td>
+					<td>Anguilla</td>
+					<td>-</td>
+					<td>AI</td>
+					<td>AIA</td>
+					<td>1-264</td>
+				</tr>
+				<tr>
+					<td>9</td>
+					<td>Antarctica</td>
+					<td>Antarctica</td>
+					<td>-</td>
+					<td>AQ</td>
+					<td>ATA</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>10</td>
+					<td>Antigua and Barbuda</td>
+					<td>Antigua and Barbuda</td>
+					<td>-</td>
+					<td>AG</td>
+					<td>ATG</td>
+					<td>1-268</td>
+				</tr>
+				<tr>
+					<td>11</td>
+					<td>Argentina</td>
+					<td>Argentina</td>
+					<td>-</td>
+					<td>AR</td>
+					<td>ARG</td>
+					<td>54</td>
+				</tr>
+				<tr>
+					<td>12</td>
+					<td>Armenia</td>
+					<td>Armenia</td>
+					<td>-</td>
+					<td>AM</td>
+					<td>ARM</td>
+					<td>374</td>
+				</tr>
+				<tr>
+					<td>13</td>
+					<td>Netherlands</td>
+					<td>Aruba</td>
+					<td>-</td>
+					<td>AW</td>
+					<td>ABW</td>
+					<td>297</td>
+				</tr>
+				<tr>
+					<td>14</td>
+					<td>Australia</td>
+					<td>Australia</td>
+					<td>-</td>
+					<td>AU</td>
+					<td>AUS</td>
+					<td>61</td>
+				</tr>
+				<tr>
+					<td>15</td>
+					<td>Austria</td>
+					<td>Austria</td>
+					<td>-</td>
+					<td>AT</td>
+					<td>AUT</td>
+					<td>43</td>
+				</tr>
+				<tr>
+					<td>16</td>
+					<td>Azerbaijan</td>
+					<td>Azerbaijan</td>
+					<td>Republic of Azerbaijan</td>
+					<td>AZ</td>
+					<td>AZE</td>
+					<td>994</td>
+				</tr>
+				<tr>
+					<td>17</td>
+					<td>Bahamas</td>
+					<td>Bahamas</td>
+					<td>The Commonwealth of the Bahamas</td>
+					<td>BS</td>
+					<td>BHS</td>
+					<td>1-242</td>
+				</tr>
+				<tr>
+					<td>18</td>
+					<td>Bahrain</td>
+					<td>Bahrain</td>
+					<td>-</td>
+					<td>BH</td>
+					<td>BHR</td>
+					<td>973</td>
+				</tr>
+				<tr>
+					<td>19</td>
+					<td>Bangladesh</td>
+					<td>Bangladesh</td>
+					<td>-</td>
+					<td>BD</td>
+					<td>BGD</td>
+					<td>880</td>
+				</tr>
+				<tr>
+					<td>20</td>
+					<td>Barbados</td>
+					<td>Barbados</td>
+					<td>-</td>
+					<td>BB</td>
+					<td>BRB</td>
+					<td>1-246</td>
+				</tr>
+				<tr>
+					<td>21</td>
+					<td>Belarus</td>
+					<td>Belarus</td>
+					<td>-</td>
+					<td>BY</td>
+					<td>BLR</td>
+					<td>375</td>
+				</tr>
+				<tr>
+					<td>22</td>
+					<td>Belgium</td>
+					<td>Belgium</td>
+					<td>-</td>
+					<td>BE</td>
+					<td>BEL</td>
+					<td>32</td>
+				</tr>
+				<tr>
+					<td>23</td>
+					<td>Belize</td>
+					<td>Belize</td>
+					<td>-</td>
+					<td>BZ</td>
+					<td>BLZ</td>
+					<td>501</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td>Benin</td>
+					<td>Benin</td>
+					<td>Republic of Benin</td>
+					<td>BJ</td>
+					<td>BEN</td>
+					<td>229</td>
+				</tr>
+				<tr>
+					<td>25</td>
+					<td>United Kingdom</td>
+					<td>Bermuda</td>
+					<td>-</td>
+					<td>BM</td>
+					<td>BMU</td>
+					<td>1-441</td>
+				</tr>
+				<tr>
+					<td>26</td>
+					<td>Bhutan</td>
+					<td>Bhutan</td>
+					<td>-</td>
+					<td>BT</td>
+					<td>BTN</td>
+					<td>975</td>
+				</tr>
+				<tr>
+					<td>27</td>
+					<td>Bolivia</td>
+					<td>Bolivia</td>
+					<td>Plurinational State of Bolivia</td>
+					<td>BO</td>
+					<td>BOL</td>
+					<td>591</td>
+				</tr>
+				<tr>
+					<td>28</td>
+					<td>Netherlands</td>
+					<td>Bonaire, Sint Eustatius and Saba</td>
+					<td>-</td>
+					<td>BQ</td>
+					<td>BES</td>
+					<td>599</td>
+				</tr>
+				<tr>
+					<td>29</td>
+					<td>Bosnia and Herzegovina</td>
+					<td>Bosnia and Herzegovina</td>
+					<td>-</td>
+					<td>BA</td>
+					<td>BIH</td>
+					<td>387</td>
+				</tr>
+				<tr>
+					<td>30</td>
+					<td>Botswana</td>
+					<td>Botswana</td>
+					<td>-</td>
+					<td>BW</td>
+					<td>BWA</td>
+					<td>267</td>
+				</tr>
+				<tr>
+					<td>31</td>
+					<td>Norway</td>
+					<td>Bouvet Island</td>
+					<td>-</td>
+					<td>BV</td>
+					<td>BVT</td>
+					<td>47</td>
+				</tr>
+				<tr>
+					<td>32</td>
+					<td>Brazil</td>
+					<td>Brazil</td>
+					<td>-</td>
+					<td>BR</td>
+					<td>BRA</td>
+					<td>55</td>
+				</tr>
+				<tr>
+					<td>33</td>
+					<td>Brunei </td>
+					<td>Brunei </td>
+					<td>Brunei Darussalam</td>
+					<td>BN</td>
+					<td>BRN</td>
+					<td>673</td>
+				</tr>
+				<tr>
+					<td>34</td>
+					<td>Bulgaria</td>
+					<td>Bulgaria</td>
+					<td>-</td>
+					<td>BG</td>
+					<td>BGR</td>
+					<td>359</td>
+				</tr>
+				<tr>
+					<td>35</td>
+					<td>Burkina Faso</td>
+					<td>Burkina Faso</td>
+					<td>-</td>
+					<td>BF</td>
+					<td>BFA</td>
+					<td>226</td>
+				</tr>
+				<tr>
+					<td>36</td>
+					<td>Burundi</td>
+					<td>Burundi</td>
+					<td>-</td>
+					<td>BI</td>
+					<td>BDI</td>
+					<td>257</td>
+				</tr>
+				<tr>
+					<td>37</td>
+					<td>Cambodia</td>
+					<td>Cambodia</td>
+					<td>-</td>
+					<td>KH</td>
+					<td>KHM</td>
+					<td>855</td>
+				</tr>
+				<tr>
+					<td>38</td>
+					<td>Cameroon</td>
+					<td>Cameroon</td>
+					<td>-</td>
+					<td>CM</td>
+					<td>CMR</td>
+					<td>237</td>
+				</tr>
+				<tr>
+					<td>39</td>
+					<td>Canada</td>
+					<td>Canada</td>
+					<td>-</td>
+					<td>CA</td>
+					<td>CAN</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>40</td>
+					<td>Cape Verde</td>
+					<td>Cape Verde</td>
+					<td>Cabo Verde</td>
+					<td>CV</td>
+					<td>CPV</td>
+					<td>238</td>
+				</tr>
+				<tr>
+					<td>41</td>
+					<td>United Kingdom</td>
+					<td>Cayman Islands</td>
+					<td>-</td>
+					<td>KY</td>
+					<td>CYM</td>
+					<td>1-345</td>
+				</tr>
+				<tr>
+					<td>42</td>
+					<td>Central African Republic</td>
+					<td>Central African Republic</td>
+					<td>-</td>
+					<td>CF</td>
+					<td>CAF</td>
+					<td>236</td>
+				</tr>
+				<tr>
+					<td>43</td>
+					<td>Chad</td>
+					<td>Chad</td>
+					<td>-</td>
+					<td>TD</td>
+					<td>TCD</td>
+					<td>235</td>
+				</tr>
+				<tr>
+					<td>44</td>
+					<td>Chile</td>
+					<td>Chile</td>
+					<td>-</td>
+					<td>CL</td>
+					<td>CHL</td>
+					<td>56</td>
+				</tr>
+				<tr>
+					<td>45</td>
+					<td>China</td>
+					<td>China</td>
+					<td>-</td>
+					<td>CN</td>
+					<td>CHN</td>
+					<td>86</td>
+				</tr>
+				<tr>
+					<td>46</td>
+					<td>Colombia</td>
+					<td>Colombia</td>
+					<td>-</td>
+					<td>CO</td>
+					<td>COL</td>
+					<td>57</td>
+				</tr>
+				<tr>
+					<td>47</td>
+					<td>Comoros</td>
+					<td>Comoros</td>
+					<td>-</td>
+					<td>KM</td>
+					<td>COM</td>
+					<td>269</td>
+				</tr>
+				<tr>
+					<td>48</td>
+					<td>Congo-Brazzaville</td>
+					<td>Congo-Brazzaville</td>
+					<td>Republic of Congo</td>
+					<td>CG</td>
+					<td>COG</td>
+					<td>242</td>
+				</tr>
+				<tr>
+					<td>49</td>
+					<td>Congo-Kinshasa</td>
+					<td>Congo-Kinshasa</td>
+					<td>Democratic Republic of Congo (DRC)</td>
+					<td>CD</td>
+					<td>COD</td>
+					<td>243</td>
+				</tr>
+				<tr>
+					<td>50</td>
+					<td>Cook Islands</td>
+					<td>Cook Islands</td>
+					<td>-</td>
+					<td>CK</td>
+					<td>COK</td>
+					<td>682</td>
+				</tr>
+				<tr>
+					<td>51</td>
+					<td>Costa Rica</td>
+					<td>Costa Rica</td>
+					<td>-</td>
+					<td>CR</td>
+					<td>CRI</td>
+					<td>506</td>
+				</tr>
+				<tr>
+					<td>52</td>
+					<td>Côte d'Ivoire</td>
+					<td>Côte d'Ivoire</td>
+					<td>-</td>
+					<td>CI</td>
+					<td>CIV</td>
+					<td>225</td>
+				</tr>
+				<tr>
+					<td>53</td>
+					<td>Croatia</td>
+					<td>Croatia</td>
+					<td>-</td>
+					<td>HR</td>
+					<td>HRV</td>
+					<td>385</td>
+				</tr>
+				<tr>
+					<td>54</td>
+					<td>Cuba</td>
+					<td>Cuba</td>
+					<td>-</td>
+					<td>CU</td>
+					<td>CUB</td>
+					<td>53</td>
+				</tr>
+				<tr>
+					<td>55</td>
+					<td>Netherlands</td>
+					<td>Curaçao</td>
+					<td>-</td>
+					<td>CW</td>
+					<td>CUW</td>
+					<td>599</td>
+				</tr>
+				<tr>
+					<td>56</td>
+					<td>Cyprus</td>
+					<td>Cyprus</td>
+					<td>-</td>
+					<td>CY</td>
+					<td>CYP</td>
+					<td>357</td>
+				</tr>
+				<tr>
+					<td>57</td>
+					<td>Czech Republic</td>
+					<td>Czech Republic</td>
+					<td>Czechia</td>
+					<td>CZ</td>
+					<td>CZE</td>
+					<td>420</td>
+				</tr>
+				<tr>
+					<td>58</td>
+					<td>Denmark</td>
+					<td>Denmark</td>
+					<td>-</td>
+					<td>DK</td>
+					<td>DNK</td>
+					<td>45</td>
+				</tr>
+				<tr>
+					<td>59</td>
+					<td>Djibouti</td>
+					<td>Djibouti</td>
+					<td>-</td>
+					<td>DJ</td>
+					<td>DJI</td>
+					<td>253</td>
+				</tr>
+				<tr>
+					<td>60</td>
+					<td>Dominica</td>
+					<td>Dominica</td>
+					<td>The Commonwealth of Dominica</td>
+					<td>DM</td>
+					<td>DMA</td>
+					<td>1-767</td>
+				</tr>
+				<tr>
+					<td>61</td>
+					<td>Dominican Republic</td>
+					<td>Dominican Republic</td>
+					<td>-</td>
+					<td>DO</td>
+					<td>DOM</td>
+					<td>1-809 / 1-829</td>
+				</tr>
+				<tr>
+					<td>62</td>
+					<td>Ecuador</td>
+					<td>Ecuador</td>
+					<td>-</td>
+					<td>EC</td>
+					<td>ECU</td>
+					<td>593</td>
+				</tr>
+				<tr>
+					<td>63</td>
+					<td>Egypt</td>
+					<td>Egypt</td>
+					<td>-</td>
+					<td>EG</td>
+					<td>EGY</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td>64</td>
+					<td>El Salvador</td>
+					<td>El Salvador</td>
+					<td>-</td>
+					<td>SV</td>
+					<td>SLV</td>
+					<td>503</td>
+				</tr>
+				<tr>
+					<td>65</td>
+					<td>Equatorial Guinea</td>
+					<td>Equatorial Guinea</td>
+					<td>-</td>
+					<td>GQ</td>
+					<td>GNQ</td>
+					<td>240</td>
+				</tr>
+				<tr>
+					<td>66</td>
+					<td>Eritrea</td>
+					<td>Eritrea</td>
+					<td>-</td>
+					<td>ER</td>
+					<td>ERI</td>
+					<td>291</td>
+				</tr>
+				<tr>
+					<td>67</td>
+					<td>Estonia</td>
+					<td>Estonia</td>
+					<td>-</td>
+					<td>EE</td>
+					<td>EST</td>
+					<td>372</td>
+				</tr>
+				<tr>
+					<td>68</td>
+					<td>Eswatini</td>
+					<td>Eswatini</td>
+					<td>Swaziland</td>
+					<td>SZ</td>
+					<td>SWZ</td>
+					<td>268</td>
+				</tr>
+				<tr>
+					<td>69</td>
+					<td>Ethiopia</td>
+					<td>Ethiopia</td>
+					<td>-</td>
+					<td>ET</td>
+					<td>ETH</td>
+					<td>251</td>
+				</tr>
+				<tr>
+					<td>70</td>
+					<td>United Kingdom</td>
+					<td>Falkland Islands </td>
+					<td>Malvinas</td>
+					<td>FK</td>
+					<td>FLK</td>
+					<td>500</td>
+				</tr>
+				<tr>
+					<td>71</td>
+					<td>Denmark</td>
+					<td>Faroe Islands </td>
+					<td>-</td>
+					<td>FO</td>
+					<td>FRO</td>
+					<td>298</td>
+				</tr>
+				<tr>
+					<td>72</td>
+					<td>Fiji</td>
+					<td>Fiji</td>
+					<td>-</td>
+					<td>FJ</td>
+					<td>FJI</td>
+					<td>679</td>
+				</tr>
+				<tr>
+					<td>73</td>
+					<td>Finland</td>
+					<td>Finland</td>
+					<td>-</td>
+					<td>FI</td>
+					<td>FIN</td>
+					<td>358</td>
+				</tr>
+				<tr>
+					<td>74</td>
+					<td>France</td>
+					<td>France</td>
+					<td>-</td>
+					<td>FR</td>
+					<td>FRA</td>
+					<td>33</td>
+				</tr>
+				<tr>
+					<td>75</td>
+					<td>France</td>
+					<td>French Guiana</td>
+					<td>-</td>
+					<td>GF</td>
+					<td>GUF</td>
+					<td>594</td>
+				</tr>
+				<tr>
+					<td>76</td>
+					<td>France</td>
+					<td>French Polynesia</td>
+					<td>-</td>
+					<td>PF</td>
+					<td>PYF</td>
+					<td>689</td>
+				</tr>
+				<tr>
+					<td>77</td>
+					<td>Gabon</td>
+					<td>Gabon</td>
+					<td>-</td>
+					<td>GA</td>
+					<td>GAB</td>
+					<td>241</td>
+				</tr>
+				<tr>
+					<td>78</td>
+					<td>Gambia</td>
+					<td>Gambia</td>
+					<td>-</td>
+					<td>GM</td>
+					<td>GMB</td>
+					<td>220</td>
+				</tr>
+				<tr>
+					<td>79</td>
+					<td>Georgia</td>
+					<td>Georgia</td>
+					<td>-</td>
+					<td>GE</td>
+					<td>GEO</td>
+					<td>995</td>
+				</tr>
+				<tr>
+					<td>80</td>
+					<td>Germany</td>
+					<td>Germany</td>
+					<td>-</td>
+					<td>DE</td>
+					<td>DEU</td>
+					<td>49</td>
+				</tr>
+				<tr>
+					<td>81</td>
+					<td>Ghana</td>
+					<td>Ghana</td>
+					<td>-</td>
+					<td>GH</td>
+					<td>GHA</td>
+					<td>233</td>
+				</tr>
+				<tr>
+					<td>82</td>
+					<td>United Kingdom</td>
+					<td>Gibraltar</td>
+					<td>-</td>
+					<td>GI</td>
+					<td>GIB</td>
+					<td>350</td>
+				</tr>
+				<tr>
+					<td>83</td>
+					<td>Greece</td>
+					<td>Greece</td>
+					<td>-</td>
+					<td>GR</td>
+					<td>GRC</td>
+					<td>30</td>
+				</tr>
+				<tr>
+					<td>84</td>
+					<td>Denmark</td>
+					<td>Greenland</td>
+					<td>-</td>
+					<td>GL</td>
+					<td>GRL</td>
+					<td>299</td>
+				</tr>
+				<tr>
+					<td>85</td>
+					<td>Grenada</td>
+					<td>Grenada</td>
+					<td>-</td>
+					<td>GD</td>
+					<td>GRD</td>
+					<td>1-473</td>
+				</tr>
+				<tr>
+					<td>86</td>
+					<td>France</td>
+					<td>Guadeloupe</td>
+					<td>-</td>
+					<td>GP</td>
+					<td>GLP</td>
+					<td>590</td>
+				</tr>
+				<tr>
+					<td>87</td>
+					<td>United States of America</td>
+					<td>Guam</td>
+					<td>-</td>
+					<td>GU</td>
+					<td>GUM</td>
+					<td>1-671</td>
+				</tr>
+				<tr>
+					<td>88</td>
+					<td>Guatemala</td>
+					<td>Guatemala</td>
+					<td>-</td>
+					<td>GT</td>
+					<td>GTM</td>
+					<td>502</td>
+				</tr>
+				<tr>
+					<td>89</td>
+					<td>Guinea</td>
+					<td>Guinea</td>
+					<td>-</td>
+					<td>GN</td>
+					<td>GIN</td>
+					<td>224</td>
+				</tr>
+				<tr>
+					<td>90</td>
+					<td>Guinea-Bissau</td>
+					<td>Guinea-Bissau</td>
+					<td>-</td>
+					<td>GW</td>
+					<td>GNB</td>
+					<td>245</td>
+				</tr>
+				<tr>
+					<td>91</td>
+					<td>Guyana</td>
+					<td>Guyana</td>
+					<td>-</td>
+					<td>GY</td>
+					<td>GUY</td>
+					<td>592</td>
+				</tr>
+				<tr>
+					<td>92</td>
+					<td>Haiti</td>
+					<td>Haiti</td>
+					<td>-</td>
+					<td>HT</td>
+					<td>HTI</td>
+					<td>509</td>
+				</tr>
+				<tr>
+					<td>93</td>
+					<td>Honduras</td>
+					<td>Honduras</td>
+					<td>-</td>
+					<td>HN</td>
+					<td>HND</td>
+					<td>504</td>
+				</tr>
+				<tr>
+					<td>94</td>
+					<td>China</td>
+					<td>Hong Kong</td>
+					<td>-</td>
+					<td>HK</td>
+					<td>HKG</td>
+					<td>852</td>
+				</tr>
+				<tr>
+					<td>95</td>
+					<td>Hungary</td>
+					<td>Hungary</td>
+					<td>-</td>
+					<td>HU</td>
+					<td>HUN</td>
+					<td>36</td>
+				</tr>
+				<tr>
+					<td>96</td>
+					<td>Iceland</td>
+					<td>Iceland</td>
+					<td>-</td>
+					<td>IS</td>
+					<td>ISL</td>
+					<td>354</td>
+				</tr>
+				<tr>
+					<td>97</td>
+					<td>India</td>
+					<td>India</td>
+					<td>-</td>
+					<td>IN</td>
+					<td>IND</td>
+					<td>91</td>
+				</tr>
+				<tr>
+					<td>98</td>
+					<td>Indonesia</td>
+					<td>Indonesia</td>
+					<td>-</td>
+					<td>ID</td>
+					<td>IDN</td>
+					<td>62</td>
+				</tr>
+				<tr>
+					<td>99</td>
+					<td>Iran</td>
+					<td>Iran</td>
+					<td>Islamic Republic of Iran</td>
+					<td>IR</td>
+					<td>IRN</td>
+					<td>98</td>
+				</tr>
+				<tr>
+					<td>100</td>
+					<td>Iraq</td>
+					<td>Iraq</td>
+					<td>-</td>
+					<td>IQ</td>
+					<td>IRQ</td>
+					<td>964</td>
+				</tr>
+				<tr>
+					<td>101</td>
+					<td>Ireland</td>
+					<td>Ireland</td>
+					<td>-</td>
+					<td>IE</td>
+					<td>IRL</td>
+					<td>353</td>
+				</tr>
+				<tr>
+					<td>102</td>
+					<td>Israel</td>
+					<td>Israel</td>
+					<td>-</td>
+					<td>IL</td>
+					<td>ISR</td>
+					<td>972</td>
+				</tr>
+				<tr>
+					<td>103</td>
+					<td>Italy</td>
+					<td>Italy</td>
+					<td>-</td>
+					<td>IT</td>
+					<td>ITA</td>
+					<td>39</td>
+				</tr>
+				<tr>
+					<td>104</td>
+					<td>Jamaica</td>
+					<td>Jamaica</td>
+					<td>-</td>
+					<td>JM</td>
+					<td>JAM</td>
+					<td>1-876</td>
+				</tr>
+				<tr>
+					<td>105</td>
+					<td>Japan</td>
+					<td>Japan</td>
+					<td>-</td>
+					<td>JP</td>
+					<td>JPN</td>
+					<td>81</td>
+				</tr>
+				<tr>
+					<td>106</td>
+					<td>Jordan</td>
+					<td>Jordan</td>
+					<td>-</td>
+					<td>JO</td>
+					<td>JOR</td>
+					<td>962</td>
+				</tr>
+				<tr>
+					<td>107</td>
+					<td>Kazakhstan</td>
+					<td>Kazakhstan</td>
+					<td>-</td>
+					<td>KZ</td>
+					<td>KAZ</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>108</td>
+					<td>Kenya</td>
+					<td>Kenya</td>
+					<td>-</td>
+					<td>KE</td>
+					<td>KEN</td>
+					<td>254</td>
+				</tr>
+				<tr>
+					<td>109</td>
+					<td>Kiribati</td>
+					<td>Kiribati</td>
+					<td>-</td>
+					<td>KI</td>
+					<td>KIR</td>
+					<td>686</td>
+				</tr>
+				<tr>
+					<td>110</td>
+					<td>Kuwait</td>
+					<td>Kuwait</td>
+					<td>-</td>
+					<td>KW</td>
+					<td>KWT</td>
+					<td>965</td>
+				</tr>
+				<tr>
+					<td>111</td>
+					<td>Kyrgyzstan</td>
+					<td>Kyrgyzstan</td>
+					<td>-</td>
+					<td>KG</td>
+					<td>KGZ</td>
+					<td>996</td>
+				</tr>
+				<tr>
+					<td>112</td>
+					<td>Laos</td>
+					<td>Laos</td>
+					<td>Lao people’s democratic republic</td>
+					<td>LA</td>
+					<td>LAO</td>
+					<td>856</td>
+				</tr>
+				<tr>
+					<td>113</td>
+					<td>Latvia</td>
+					<td>Latvia</td>
+					<td>-</td>
+					<td>LV</td>
+					<td>LVA</td>
+					<td>371</td>
+				</tr>
+				<tr>
+					<td>114</td>
+					<td>Lebanon</td>
+					<td>Lebanon</td>
+					<td>-</td>
+					<td>LB</td>
+					<td>LBN</td>
+					<td>961</td>
+				</tr>
+				<tr>
+					<td>115</td>
+					<td>Lesotho</td>
+					<td>Lesotho</td>
+					<td>-</td>
+					<td>LS</td>
+					<td>LSO</td>
+					<td>266</td>
+				</tr>
+				<tr>
+					<td>116</td>
+					<td>Liberia</td>
+					<td>Liberia</td>
+					<td>-</td>
+					<td>LR</td>
+					<td>LBR</td>
+					<td>231</td>
+				</tr>
+				<tr>
+					<td>117</td>
+					<td>Libya</td>
+					<td>Libya</td>
+					<td>-</td>
+					<td>LY</td>
+					<td>LBY</td>
+					<td>218</td>
+				</tr>
+				<tr>
+					<td>118</td>
+					<td>Liechtenstein</td>
+					<td>Liechtenstein</td>
+					<td>-</td>
+					<td>LI</td>
+					<td>LIE</td>
+					<td>423</td>
+				</tr>
+				<tr>
+					<td>119</td>
+					<td>Lithuania</td>
+					<td>Lithuania</td>
+					<td>-</td>
+					<td>LT</td>
+					<td>LTU</td>
+					<td>370</td>
+				</tr>
+				<tr>
+					<td>120</td>
+					<td>Luxembourg</td>
+					<td>Luxembourg</td>
+					<td>-</td>
+					<td>LU</td>
+					<td>LUX</td>
+					<td>352</td>
+				</tr>
+				<tr>
+					<td>121</td>
+					<td>China</td>
+					<td>Macao</td>
+					<td>Macau</td>
+					<td>MO</td>
+					<td>MAC</td>
+					<td>853</td>
+				</tr>
+				<tr>
+					<td>122</td>
+					<td>Madagascar</td>
+					<td>Madagascar</td>
+					<td>-</td>
+					<td>MG</td>
+					<td>MDG</td>
+					<td>261</td>
+				</tr>
+				<tr>
+					<td>123</td>
+					<td>Malawi</td>
+					<td>Malawi</td>
+					<td>-</td>
+					<td>MW</td>
+					<td>MWI</td>
+					<td>265</td>
+				</tr>
+				<tr>
+					<td>124</td>
+					<td>Malaysia</td>
+					<td>Malaysia</td>
+					<td>-</td>
+					<td>MY</td>
+					<td>MYS</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td>125</td>
+					<td>Maldives</td>
+					<td>Maldives</td>
+					<td>-</td>
+					<td>MV</td>
+					<td>MDV</td>
+					<td>960</td>
+				</tr>
+				<tr>
+					<td>126</td>
+					<td>Mali</td>
+					<td>Mali</td>
+					<td>-</td>
+					<td>ML</td>
+					<td>MLI</td>
+					<td>223</td>
+				</tr>
+				<tr>
+					<td>127</td>
+					<td>Malta</td>
+					<td>Malta</td>
+					<td>-</td>
+					<td>MT</td>
+					<td>MLT</td>
+					<td>356</td>
+				</tr>
+				<tr>
+					<td>128</td>
+					<td>Marshall Islands</td>
+					<td>Marshall Islands</td>
+					<td>-</td>
+					<td>MH</td>
+					<td>MHL</td>
+					<td>692</td>
+				</tr>
+				<tr>
+					<td>129</td>
+					<td>France</td>
+					<td>Martinique</td>
+					<td>-</td>
+					<td>MQ</td>
+					<td>MTQ</td>
+					<td>596</td>
+				</tr>
+				<tr>
+					<td>130</td>
+					<td>Mauritania</td>
+					<td>Mauritania</td>
+					<td>-</td>
+					<td>MR</td>
+					<td>MRT</td>
+					<td>222</td>
+				</tr>
+				<tr>
+					<td>131</td>
+					<td>Mauritius</td>
+					<td>Mauritius</td>
+					<td>-</td>
+					<td>MU</td>
+					<td>MUS</td>
+					<td>230</td>
+				</tr>
+				<tr>
+					<td>132</td>
+					<td>France</td>
+					<td>Mayotte</td>
+					<td>-</td>
+					<td>YT</td>
+					<td>MYT</td>
+					<td>262</td>
+				</tr>
+				<tr>
+					<td>133</td>
+					<td>Mexico</td>
+					<td>Mexico</td>
+					<td>-</td>
+					<td>MX</td>
+					<td>MEX</td>
+					<td>52</td>
+				</tr>
+				<tr>
+					<td>134</td>
+					<td>Micronesia </td>
+					<td>Micronesia </td>
+					<td>Federated States of Micronesia</td>
+					<td>FM</td>
+					<td>FSM</td>
+					<td>691</td>
+				</tr>
+				<tr>
+					<td>135</td>
+					<td>Moldova</td>
+					<td>Moldova</td>
+					<td>Republic of Moldova</td>
+					<td>MD</td>
+					<td>MDA</td>
+					<td>373</td>
+				</tr>
+				<tr>
+					<td>136</td>
+					<td>Monaco</td>
+					<td>Monaco</td>
+					<td>-</td>
+					<td>MC</td>
+					<td>MCO</td>
+					<td>377</td>
+				</tr>
+				<tr>
+					<td>137</td>
+					<td>Mongolia</td>
+					<td>Mongolia</td>
+					<td>-</td>
+					<td>MN</td>
+					<td>MNG</td>
+					<td>976</td>
+				</tr>
+				<tr>
+					<td>138</td>
+					<td>Montenegro</td>
+					<td>Montenegro</td>
+					<td>-</td>
+					<td>ME</td>
+					<td>MNE</td>
+					<td>382</td>
+				</tr>
+				<tr>
+					<td>139</td>
+					<td>United Kingdom</td>
+					<td>Montserrat</td>
+					<td>-</td>
+					<td>MS</td>
+					<td>MSR</td>
+					<td>1-664</td>
+				</tr>
+				<tr>
+					<td>140</td>
+					<td>Morocco</td>
+					<td>Morocco</td>
+					<td>-</td>
+					<td>MA</td>
+					<td>MAR</td>
+					<td>212</td>
+				</tr>
+				<tr>
+					<td>141</td>
+					<td>Mozambique</td>
+					<td>Mozambique</td>
+					<td>-</td>
+					<td>MZ</td>
+					<td>MOZ</td>
+					<td>258</td>
+				</tr>
+				<tr>
+					<td>142</td>
+					<td>Myanmar</td>
+					<td>Myanmar</td>
+					<td>-</td>
+					<td>MM</td>
+					<td>MMR</td>
+					<td>95</td>
+				</tr>
+				<tr>
+					<td>143</td>
+					<td>Namibia</td>
+					<td>Namibia</td>
+					<td>-</td>
+					<td>nan</td>
+					<td>NAM</td>
+					<td>264</td>
+				</tr>
+				<tr>
+					<td>144</td>
+					<td>Nauru</td>
+					<td>Nauru</td>
+					<td>-</td>
+					<td>NR</td>
+					<td>NRU</td>
+					<td>674</td>
+				</tr>
+				<tr>
+					<td>145</td>
+					<td>Nepal</td>
+					<td>Nepal</td>
+					<td>Federal Democratic Republic of Nepal</td>
+					<td>NP</td>
+					<td>NPL</td>
+					<td>977</td>
+				</tr>
+				<tr>
+					<td>146</td>
+					<td>Netherlands</td>
+					<td>Netherlands</td>
+					<td>-</td>
+					<td>NL</td>
+					<td>NLD</td>
+					<td>31</td>
+				</tr>
+				<tr>
+					<td>147</td>
+					<td>France</td>
+					<td>New Caledonia</td>
+					<td>-</td>
+					<td>NC</td>
+					<td>NCL</td>
+					<td>687</td>
+				</tr>
+				<tr>
+					<td>148</td>
+					<td>New Zealand</td>
+					<td>New Zealand</td>
+					<td>-</td>
+					<td>NZ</td>
+					<td>NZL</td>
+					<td>64</td>
+				</tr>
+				<tr>
+					<td>149</td>
+					<td>Nicaragua</td>
+					<td>Nicaragua</td>
+					<td>-</td>
+					<td>NI</td>
+					<td>NIC</td>
+					<td>505</td>
+				</tr>
+				<tr>
+					<td>150</td>
+					<td>Niger</td>
+					<td>Niger</td>
+					<td>-</td>
+					<td>NE</td>
+					<td>NER</td>
+					<td>227</td>
+				</tr>
+				<tr>
+					<td>151</td>
+					<td>Nigeria</td>
+					<td>Nigeria</td>
+					<td>-</td>
+					<td>NG</td>
+					<td>NGA</td>
+					<td>234</td>
+				</tr>
+				<tr>
+					<td>152</td>
+					<td>Niue</td>
+					<td>Niue</td>
+					<td>-</td>
+					<td>NU</td>
+					<td>NIU</td>
+					<td>683</td>
+				</tr>
+				<tr>
+					<td>153</td>
+					<td>Australia</td>
+					<td>Norfolk Island</td>
+					<td>-</td>
+					<td>NF</td>
+					<td>NFK</td>
+					<td>672</td>
+				</tr>
+				<tr>
+					<td>154</td>
+					<td>North Korea</td>
+					<td>North Korea</td>
+					<td>Democratic people’s republic of Korea (DPRK)</td>
+					<td>KP</td>
+					<td>PRK</td>
+					<td>850</td>
+				</tr>
+				<tr>
+					<td>155</td>
+					<td>North Macedonia</td>
+					<td>North Macedonia</td>
+					<td>Republic of North Macedonia</td>
+					<td>MK</td>
+					<td>MKD</td>
+					<td>389</td>
+				</tr>
+				<tr>
+					<td>156</td>
+					<td>United States of America</td>
+					<td>Northern Mariana Islands</td>
+					<td>-</td>
+					<td>MP</td>
+					<td>MNP</td>
+					<td>1-670</td>
+				</tr>
+				<tr>
+					<td>157</td>
+					<td>Norway</td>
+					<td>Norway</td>
+					<td>-</td>
+					<td>NO</td>
+					<td>NOR</td>
+					<td>47</td>
+				</tr>
+				<tr>
+					<td>158</td>
+					<td>Oman</td>
+					<td>Oman</td>
+					<td>-</td>
+					<td>OM</td>
+					<td>OMN</td>
+					<td>968</td>
+				</tr>
+				<tr>
+					<td>159</td>
+					<td>Pakistan</td>
+					<td>Pakistan</td>
+					<td>-</td>
+					<td>PK</td>
+					<td>PAK</td>
+					<td>92</td>
+				</tr>
+				<tr>
+					<td>160</td>
+					<td>Palau</td>
+					<td>Palau</td>
+					<td>-</td>
+					<td>PW</td>
+					<td>PLW</td>
+					<td>680</td>
+				</tr>
+				<tr>
+					<td>161</td>
+					<td>Palestine</td>
+					<td>Palestine</td>
+					<td>State of Palestine</td>
+					<td>PS</td>
+					<td>PSE</td>
+					<td>970</td>
+				</tr>
+				<tr>
+					<td>162</td>
+					<td>Panama</td>
+					<td>Panama</td>
+					<td>-</td>
+					<td>PA</td>
+					<td>PAN</td>
+					<td>507</td>
+				</tr>
+				<tr>
+					<td>163</td>
+					<td>Papua New Guinea</td>
+					<td>Papua New Guinea</td>
+					<td>-</td>
+					<td>PG</td>
+					<td>PNG</td>
+					<td>675</td>
+				</tr>
+				<tr>
+					<td>164</td>
+					<td>Paraguay</td>
+					<td>Paraguay</td>
+					<td>-</td>
+					<td>PY</td>
+					<td>PRY</td>
+					<td>595</td>
+				</tr>
+				<tr>
+					<td>165</td>
+					<td>Peru</td>
+					<td>Peru</td>
+					<td>-</td>
+					<td>PE</td>
+					<td>PER</td>
+					<td>51</td>
+				</tr>
+				<tr>
+					<td>166</td>
+					<td>Philippines</td>
+					<td>Philippines</td>
+					<td>-</td>
+					<td>PH</td>
+					<td>PHL</td>
+					<td>63</td>
+				</tr>
+				<tr>
+					<td>167</td>
+					<td>United Kingdom</td>
+					<td>Pitcairn</td>
+					<td>-</td>
+					<td>PN</td>
+					<td>PCN</td>
+					<td>649</td>
+				</tr>
+				<tr>
+					<td>168</td>
+					<td>Poland</td>
+					<td>Poland</td>
+					<td>-</td>
+					<td>PL</td>
+					<td>POL</td>
+					<td>48</td>
+				</tr>
+				<tr>
+					<td>169</td>
+					<td>Portugal</td>
+					<td>Portugal</td>
+					<td>-</td>
+					<td>PT</td>
+					<td>PRT</td>
+					<td>351</td>
+				</tr>
+				<tr>
+					<td>170</td>
+					<td>United States of America</td>
+					<td>Puerto Rico</td>
+					<td>-</td>
+					<td>PR</td>
+					<td>PRI</td>
+					<td>1-787 / 1-939</td>
+				</tr>
+				<tr>
+					<td>171</td>
+					<td>Qatar</td>
+					<td>Qatar</td>
+					<td>-</td>
+					<td>QA</td>
+					<td>QAT</td>
+					<td>974</td>
+				</tr>
+				<tr>
+					<td>172</td>
+					<td>France</td>
+					<td>Réunion</td>
+					<td>-</td>
+					<td>RE</td>
+					<td>REU</td>
+					<td>262</td>
+				</tr>
+				<tr>
+					<td>173</td>
+					<td>Romania</td>
+					<td>Romania</td>
+					<td>-</td>
+					<td>RO</td>
+					<td>ROU</td>
+					<td>40</td>
+				</tr>
+				<tr>
+					<td>174</td>
+					<td>Russia</td>
+					<td>Russia</td>
+					<td>Russian Federation</td>
+					<td>RU</td>
+					<td>RUS</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>175</td>
+					<td>Rwanda</td>
+					<td>Rwanda</td>
+					<td>-</td>
+					<td>RW</td>
+					<td>RWA</td>
+					<td>250</td>
+				</tr>
+				<tr>
+					<td>176</td>
+					<td>France</td>
+					<td>Saint Barthélemy</td>
+					<td>-</td>
+					<td>BL</td>
+					<td>BLM</td>
+					<td>590</td>
+				</tr>
+				<tr>
+					<td>177</td>
+					<td>United Kingdom</td>
+					<td>Saint Helena, Ascension and Tristan da Cunha</td>
+					<td>-</td>
+					<td>SH</td>
+					<td>SHN</td>
+					<td>290 / 247</td>
+				</tr>
+				<tr>
+					<td>178</td>
+					<td>Saint Kitts and Nevis</td>
+					<td>Saint Kitts and Nevis</td>
+					<td>-</td>
+					<td>KN</td>
+					<td>KNA</td>
+					<td>1-869</td>
+				</tr>
+				<tr>
+					<td>179</td>
+					<td>Saint Lucia</td>
+					<td>Saint Lucia</td>
+					<td>-</td>
+					<td>LC</td>
+					<td>LCA</td>
+					<td>1-758</td>
+				</tr>
+				<tr>
+					<td>180</td>
+					<td>France</td>
+					<td>Saint Martin (French part)</td>
+					<td>-</td>
+					<td>MF</td>
+					<td>MAF</td>
+					<td>590</td>
+				</tr>
+				<tr>
+					<td>181</td>
+					<td>France</td>
+					<td>Saint Pierre and Miquelon</td>
+					<td>-</td>
+					<td>PM</td>
+					<td>SPM</td>
+					<td>508</td>
+				</tr>
+				<tr>
+					<td>182</td>
+					<td>Saint Vincent and the Grenadines</td>
+					<td>Saint Vincent and the Grenadines</td>
+					<td>-</td>
+					<td>VC</td>
+					<td>VCT</td>
+					<td>1-784</td>
+				</tr>
+				<tr>
+					<td>183</td>
+					<td>Samoa</td>
+					<td>Samoa</td>
+					<td>-</td>
+					<td>WS</td>
+					<td>WSM</td>
+					<td>685</td>
+				</tr>
+				<tr>
+					<td>184</td>
+					<td>San Marino</td>
+					<td>San Marino</td>
+					<td>-</td>
+					<td>SM</td>
+					<td>SMR</td>
+					<td>378</td>
+				</tr>
+				<tr>
+					<td>185</td>
+					<td>Sao Tome and Principe</td>
+					<td>Sao Tome and Principe</td>
+					<td>-</td>
+					<td>ST</td>
+					<td>STP</td>
+					<td>239</td>
+				</tr>
+				<tr>
+					<td>186</td>
+					<td>Saudi Arabia</td>
+					<td>Saudi Arabia</td>
+					<td>-</td>
+					<td>SA</td>
+					<td>SAU</td>
+					<td>966</td>
+				</tr>
+				<tr>
+					<td>187</td>
+					<td>Senegal</td>
+					<td>Senegal</td>
+					<td>-</td>
+					<td>SN</td>
+					<td>SEN</td>
+					<td>221</td>
+				</tr>
+				<tr>
+					<td>188</td>
+					<td>Serbia</td>
+					<td>Serbia</td>
+					<td>-</td>
+					<td>RS</td>
+					<td>SRB</td>
+					<td>381</td>
+				</tr>
+				<tr>
+					<td>189</td>
+					<td>Seychelles</td>
+					<td>Seychelles</td>
+					<td>-</td>
+					<td>SC</td>
+					<td>SYC</td>
+					<td>248</td>
+				</tr>
+				<tr>
+					<td>190</td>
+					<td>Sierra Leone</td>
+					<td>Sierra Leone</td>
+					<td>-</td>
+					<td>SL</td>
+					<td>SLE</td>
+					<td>232</td>
+				</tr>
+				<tr>
+					<td>191</td>
+					<td>Singapore</td>
+					<td>Singapore</td>
+					<td>-</td>
+					<td>SG</td>
+					<td>SGP</td>
+					<td>65</td>
+				</tr>
+				<tr>
+					<td>192</td>
+					<td>Netherlands</td>
+					<td>Sint Maarten (Dutch part)</td>
+					<td>-</td>
+					<td>SX</td>
+					<td>SXM</td>
+					<td>1-721</td>
+				</tr>
+				<tr>
+					<td>193</td>
+					<td>Slovakia</td>
+					<td>Slovakia</td>
+					<td>-</td>
+					<td>SK</td>
+					<td>SVK</td>
+					<td>421</td>
+				</tr>
+				<tr>
+					<td>194</td>
+					<td>Slovenia</td>
+					<td>Slovenia</td>
+					<td>-</td>
+					<td>SI</td>
+					<td>SVN</td>
+					<td>386</td>
+				</tr>
+				<tr>
+					<td>195</td>
+					<td>Solomon Islands</td>
+					<td>Solomon Islands</td>
+					<td>-</td>
+					<td>SB</td>
+					<td>SLB</td>
+					<td>677</td>
+				</tr>
+				<tr>
+					<td>196</td>
+					<td>Somalia</td>
+					<td>Somalia</td>
+					<td>-</td>
+					<td>SO</td>
+					<td>SOM</td>
+					<td>252</td>
+				</tr>
+				<tr>
+					<td>197</td>
+					<td>South Africa</td>
+					<td>South Africa</td>
+					<td>-</td>
+					<td>ZA</td>
+					<td>ZAF</td>
+					<td>27</td>
+				</tr>
+				<tr>
+					<td>198</td>
+					<td>United Kingdom</td>
+					<td>South Georgia and the South Sandwich Islands</td>
+					<td>-</td>
+					<td>GS</td>
+					<td>SGS</td>
+					<td>500</td>
+				</tr>
+				<tr>
+					<td>199</td>
+					<td>South Korea</td>
+					<td>South Korea</td>
+					<td>Republic of Korea</td>
+					<td>KR</td>
+					<td>KOR</td>
+					<td>82</td>
+				</tr>
+				<tr>
+					<td>200</td>
+					<td>South Sudan</td>
+					<td>South Sudan</td>
+					<td>-</td>
+					<td>SS</td>
+					<td>SSD</td>
+					<td>211</td>
+				</tr>
+				<tr>
+					<td>201</td>
+					<td>Spain</td>
+					<td>Spain</td>
+					<td>-</td>
+					<td>ES</td>
+					<td>ESP</td>
+					<td>34</td>
+				</tr>
+				<tr>
+					<td>202</td>
+					<td>Sri Lanka</td>
+					<td>Sri Lanka</td>
+					<td>Democratic Socialist Republic of Sri Lanka</td>
+					<td>LK</td>
+					<td>LKA</td>
+					<td>94</td>
+				</tr>
+				<tr>
+					<td>203</td>
+					<td>Sudan</td>
+					<td>Sudan</td>
+					<td>-</td>
+					<td>SD</td>
+					<td>SDN</td>
+					<td>249</td>
+				</tr>
+				<tr>
+					<td>204</td>
+					<td>Suriname</td>
+					<td>Suriname</td>
+					<td>-</td>
+					<td>SR</td>
+					<td>SUR</td>
+					<td>597</td>
+				</tr>
+				<tr>
+					<td>205</td>
+					<td>Norway</td>
+					<td>Svalbard and Jan Mayen</td>
+					<td>Spitsbergen / Spitzbergen</td>
+					<td>SJ</td>
+					<td>SJM</td>
+					<td>47</td>
+				</tr>
+				<tr>
+					<td>206</td>
+					<td>Sweden</td>
+					<td>Sweden</td>
+					<td>-</td>
+					<td>SE</td>
+					<td>SWE</td>
+					<td>46</td>
+				</tr>
+				<tr>
+					<td>207</td>
+					<td>Switzerland</td>
+					<td>Switzerland</td>
+					<td>-</td>
+					<td>CH</td>
+					<td>CHE</td>
+					<td>41</td>
+				</tr>
+				<tr>
+					<td>208</td>
+					<td>Syria</td>
+					<td>Syria</td>
+					<td>Syrian Arab Republic</td>
+					<td>SY</td>
+					<td>SYR</td>
+					<td>963</td>
+				</tr>
+				<tr>
+					<td>209</td>
+					<td>China</td>
+					<td>Taiwan </td>
+					<td>Republic of China</td>
+					<td>TW</td>
+					<td>TWN</td>
+					<td>886</td>
+				</tr>
+				<tr>
+					<td>210</td>
+					<td>Tajikistan</td>
+					<td>Tajikistan</td>
+					<td>Republic of Tajikistan</td>
+					<td>TJ</td>
+					<td>TJK</td>
+					<td>992</td>
+				</tr>
+				<tr>
+					<td>211</td>
+					<td>Tanzania</td>
+					<td>Tanzania</td>
+					<td>United Republic of Tanzania</td>
+					<td>TZ</td>
+					<td>TZA</td>
+					<td>255</td>
+				</tr>
+				<tr>
+					<td>212</td>
+					<td>Thailand</td>
+					<td>Thailand</td>
+					<td>-</td>
+					<td>TH</td>
+					<td>THA</td>
+					<td>66</td>
+				</tr>
+				<tr>
+					<td>213</td>
+					<td>Timor-Leste</td>
+					<td>Timor-Leste</td>
+					<td>East Timor</td>
+					<td>TL</td>
+					<td>TLS</td>
+					<td>670</td>
+				</tr>
+				<tr>
+					<td>214</td>
+					<td>Togo</td>
+					<td>Togo</td>
+					<td>-</td>
+					<td>TG</td>
+					<td>TGO</td>
+					<td>228</td>
+				</tr>
+				<tr>
+					<td>215</td>
+					<td>New Zealand</td>
+					<td>Tokelau</td>
+					<td>-</td>
+					<td>TK</td>
+					<td>TKL</td>
+					<td>690</td>
+				</tr>
+				<tr>
+					<td>216</td>
+					<td>Tonga</td>
+					<td>Tonga</td>
+					<td>-</td>
+					<td>TO</td>
+					<td>TON</td>
+					<td>676</td>
+				</tr>
+				<tr>
+					<td>217</td>
+					<td>Trinidad and Tobago</td>
+					<td>Trinidad and Tobago</td>
+					<td>-</td>
+					<td>TT</td>
+					<td>TTO</td>
+					<td>1-868</td>
+				</tr>
+				<tr>
+					<td>218</td>
+					<td>Tunisia</td>
+					<td>Tunisia</td>
+					<td>-</td>
+					<td>TN</td>
+					<td>TUN</td>
+					<td>216</td>
+				</tr>
+				<tr>
+					<td>219</td>
+					<td>Turkey</td>
+					<td>Turkey</td>
+					<td>-</td>
+					<td>TR</td>
+					<td>TUR</td>
+					<td>90</td>
+				</tr>
+				<tr>
+					<td>220</td>
+					<td>Turkmenistan</td>
+					<td>Turkmenistan</td>
+					<td>-</td>
+					<td>TM</td>
+					<td>TKM</td>
+					<td>993</td>
+				</tr>
+				<tr>
+					<td>221</td>
+					<td>United Kingdom</td>
+					<td>Turks and Caicos Islands </td>
+					<td>-</td>
+					<td>TC</td>
+					<td>TCA</td>
+					<td>1-649</td>
+				</tr>
+				<tr>
+					<td>222</td>
+					<td>Tuvalu</td>
+					<td>Tuvalu</td>
+					<td>-</td>
+					<td>TV</td>
+					<td>TUV</td>
+					<td>688</td>
+				</tr>
+				<tr>
+					<td>223</td>
+					<td>Uganda</td>
+					<td>Uganda</td>
+					<td>-</td>
+					<td>UG</td>
+					<td>UGA</td>
+					<td>256</td>
+				</tr>
+				<tr>
+					<td>224</td>
+					<td>Ukraine</td>
+					<td>Ukraine</td>
+					<td>-</td>
+					<td>UA</td>
+					<td>UKR</td>
+					<td>380</td>
+				</tr>
+				<tr>
+					<td>225</td>
+					<td>United Arab Emirates (the)</td>
+					<td>United Arab Emirates (the)</td>
+					<td>-</td>
+					<td>AE</td>
+					<td>ARE</td>
+					<td>971</td>
+				</tr>
+				<tr>
+					<td>226</td>
+					<td>United Kingdom</td>
+					<td>United Kingdom</td>
+					<td>United Kingdom of Great Britain and Northern Ireland</td>
+					<td>GB</td>
+					<td>GBR</td>
+					<td>44</td>
+				</tr>
+				<tr>
+					<td>227</td>
+					<td>United States of America</td>
+					<td>United States of America</td>
+					<td>-</td>
+					<td>US</td>
+					<td>USA</td>
+					<td>1</td>
+				</tr>
+				<tr>
+					<td>228</td>
+					<td>Uruguay</td>
+					<td>Uruguay</td>
+					<td>-</td>
+					<td>UY</td>
+					<td>URY</td>
+					<td>598</td>
+				</tr>
+				<tr>
+					<td>229</td>
+					<td>Uzbekistan</td>
+					<td>Uzbekistan</td>
+					<td>-</td>
+					<td>UZ</td>
+					<td>UZB</td>
+					<td>998</td>
+				</tr>
+				<tr>
+					<td>230</td>
+					<td>Vanuatu</td>
+					<td>Vanuatu</td>
+					<td>-</td>
+					<td>VU</td>
+					<td>VUT</td>
+					<td>678</td>
+				</tr>
+				<tr>
+					<td>231</td>
+					<td>Vatican City</td>
+					<td>Vatican City</td>
+					<td>-</td>
+					<td>VA</td>
+					<td>VAT</td>
+					<td>379</td>
+				</tr>
+				<tr>
+					<td>232</td>
+					<td>Venezuela</td>
+					<td>Venezuela</td>
+					<td>Bolivarian Republic of Venezuela</td>
+					<td>VE</td>
+					<td>VEN</td>
+					<td>58</td>
+				</tr>
+				<tr>
+					<td>233</td>
+					<td>Viet Nam</td>
+					<td>Viet Nam</td>
+					<td>-</td>
+					<td>VN</td>
+					<td>VNM</td>
+					<td>84</td>
+				</tr>
+				<tr>
+					<td>234</td>
+					<td>United Kingdom</td>
+					<td>Virgin Islands (British)</td>
+					<td>-</td>
+					<td>VG</td>
+					<td>VGB</td>
+					<td>1-284</td>
+				</tr>
+				<tr>
+					<td>235</td>
+					<td>United States of America</td>
+					<td>Virgin Islands (U.S.)</td>
+					<td>-</td>
+					<td>VI</td>
+					<td>VIR</td>
+					<td>1-340</td>
+				</tr>
+				<tr>
+					<td>236</td>
+					<td>France</td>
+					<td>Wallis and Futuna</td>
+					<td>-</td>
+					<td>WF</td>
+					<td>WLF</td>
+					<td>681</td>
+				</tr>
+				<tr>
+					<td>237</td>
+					<td>Western Sahara</td>
+					<td>Western Sahara</td>
+					<td> Sahrawi Arab Democratic Republic</td>
+					<td>EH</td>
+					<td>ESH</td>
+					<td>212</td>
+				</tr>
+				<tr>
+					<td>238</td>
+					<td>Yemen</td>
+					<td>Yemen</td>
+					<td>-</td>
+					<td>YE</td>
+					<td>YEM</td>
+					<td>967</td>
+				</tr>
+				<tr>
+					<td>239</td>
+					<td>Zambia</td>
+					<td>Zambia</td>
+					<td>-</td>
+					<td>ZM</td>
+					<td>ZMB</td>
+					<td>260</td>
+				</tr>
+				<tr>
+					<td>240</td>
+					<td>Zimbabwe</td>
+					<td>Zimbabwe</td>
+					<td>-</td>
+					<td>ZW</td>
+					<td>ZWE</td>
+					<td>263</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+	
+	
+	<script type="text/javascript">
+		let regTable=new DataTable("#regionsTable",{
+			dom: 'lBfrtip',
+			lengthMenu: [[-1,25, 50,100], ["All", 25, 50,100]],
+			pageLength: -1,
+			buttons: [
+				
+            		{
+            			extend: 'spacer'
+            		},
+
+            		{
+            			extend: 'csv'
+            		}, 
+            		{
+            			extend: 'excel'
+            		}, 
+            		{
+            			extend: 'pdf'
+            		}, 
+            		{
+            			extend: 'print'
+            		}, 
+		   	],
+		})
+	</script>
+</body>
+</html>
